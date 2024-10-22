@@ -38,7 +38,7 @@ dengan ketentuan sebagai berikut:
 |----------|----------|
 | IT33 | 192.233 |
 
-### Paradis
+```Paradis
 auto eth0
 iface eth0 inet dhcp
 
@@ -61,5 +61,6 @@ auto eth4
 iface eth4 inet static
 	address 192.233.4.1
 	netmask 255.255.255.0
+```
 
 # Soal Praktikum 
