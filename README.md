@@ -11,7 +11,8 @@
 3. [Soal](#soal-praktikum)
 
 # Topology 
-![image](https://github.com/user-attachments/assets/22d170a4-2a8e-4e05-8a39-d073de1925ae)
+![image](https://github.com/user-attachments/assets/aadfaf11-db1a-464a-ab1b-cf53a9d91c9b)
+
 
 dengan ketentuan sebagai berikut:
 
