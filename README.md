@@ -63,5 +63,97 @@ iface eth4 inet static
 	address 192.233.4.1
 	netmask 255.255.255.0
 ```
-
+### Annie
+```
+auto eth0
+iface eth0 inet static
+	address 192.233.1.2
+	netmask 255.255.255.0
+	gateway 192.233.1.1
+```
+### Bertholdt
+```
+auto eth0
+iface eth0 inet static
+    address 192.233.1.3
+    netmask 255.255.255.0
+    gateway 192.233.1.1
+```
+### Reiner
+```
+auto eth0
+iface eth0 inet static
+    address 192.233.1.4
+    netmask 255.255.255.0
+    gateway 192.233.1.1
+```
+### Armin
+```
+auto eth0
+iface eth0 inet static
+    address 192.233.2.2
+    netmask 255.255.255.0
+    gateway 192.233.2.1
+```
+### Eren
+```
+auto eth0
+iface eth0 inet static
+    address 192.233.2.3
+    netmask 255.255.255.0
+    gateway 192.233.2.1
+```
+### Mikasa
+```
+auto eth0
+iface eth0 inet static
+    address 192.233.2.4
+    netmask 255.255.255.0
+    gateway 192.233.2.1
+```
+### Beast
+```
+auto eth0
+iface eth0 inet static
+    address 192.233.3.2
+    netmask 255.255.255.0
+    gateway 192.233.3.1
+```
+### Colossal
+```
+auto eth0
+iface eth0 inet static
+    address 192.233.3.3
+    netmask 255.255.255.0
+    gateway 192.233.3.1
+```
+### Warhammer
+```
+auto eth0
+iface eth0 inet static
+    address 192.233.3.4
+    netmask 255.255.255.0
+    gateway 192.233.3.1
+```
+### Fritz
+```
+auto eth0
+iface eth0 inet static
+    address 192.233.4.2
+    netmask 255.255.255.0
+    gateway 192.233.4.1
+```
+### Tybur
+```
+auto eth0
+iface eth0 inet static
+    address 192.233.4.3
+    netmask 255.255.255.0
+    gateway 192.233.4.1
+```
+### Zeke & Erwin
+```
+auto eth0
+iface eth0 inet dhcp
+```
 # Soal Praktikum 
