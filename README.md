@@ -338,6 +338,22 @@ service bind9 restart
 ## Soal 1
 
 ## Soal 2-5
+### Pada Paradis
+```
+echo '
+SERVERS="192.233.4.3"
+INTERFACES="eth1 eth2 eth3 eth4"
+OPTIONS=""
+' > /etc/default/isc-dhcp-relay
+
+echo '
+net.ipv4.ip_forward=1
+' > /etc/sysctl.conf
+
+service isc-dhcp-relay restart
+```
+
+### Pada Tybur
 ```
 echo 'INTERFACESv4="eth0"' > /etc/default/isc-dhcp-server
 
