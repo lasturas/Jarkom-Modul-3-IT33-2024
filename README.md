@@ -333,10 +333,21 @@ service bind9 restart
 ```
 
 ## Soal 1
+Lakukan konfigurasi sesuai dengan peta yang sudah diberikan. (1)
+<hr>
+
 ### [Topology](#topology)
 ### [Konfigurasi](#konfigurasi)
 
 ## Soal 2-5
+Jauh sebelum perang dimulai, ternyata para keluarga bangsawan, Tybur dan Fritz, telah membuat kesepakatan sebagai berikut:
+Semua Client harus menggunakan konfigurasi ip address dari keluarga Tybur (dhcp).
+Client yang melalui bangsa marley mendapatkan range IP dari [prefix IP].1.05 - [prefix IP].1.25 dan [prefix IP].1.50 - [prefix IP].1.100 (2)
+Client yang melalui bangsa eldia mendapatkan range IP dari [prefix IP].2.09 - [prefix IP].2.27 dan [prefix IP].2 .81 - [prefix IP].2.243 (3)
+Client mendapatkan DNS dari keluarga Fritz dan dapat terhubung dengan internet melalui DNS tersebut (4)
+Dikarenakan keluarga Tybur tidak menyukai kaum eldia, maka mereka hanya meminjamkan ip address ke kaum eldia selama 6 menit. Namun untuk kaum marley, keluarga Tybur meminjamkan ip address selama 30 menit. Waktu maksimal dialokasikan untuk peminjaman alamat IP selama 87 menit. (5)
+<hr>
+
 ### Pada Paradis
 ```
 echo '
