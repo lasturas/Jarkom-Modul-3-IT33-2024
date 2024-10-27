@@ -205,7 +205,7 @@ up echo nameserver 192.168.122.1
 
 # .bashrc
 
-## Paradis (DHCP Relay)
+### Paradis (DHCP Relay)
 ```
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 192.233.0.0/16
 apt-get update
@@ -213,14 +213,14 @@ apt-get install isc-dhcp-relay -y
 service isc-dhcp-relay start
 ```
 
-## Tybur (DHCP Server)
+### Tybur (DHCP Server)
 ```
 echo 'nameserver 192.233.4.2' > /etc/resolv.conf
 apt-get update
 apt-get install isc-dhcp-server -y
 ```
 
-## Fritz (DNS Server)
+### Fritz (DNS Server)
 ```
 echo 'nameserver 192.168.122.1' > /etc/resolv.conf
 apt-get update
@@ -255,7 +255,7 @@ apt install php7.3 -y
 apt install php7.3-fpm -y
 ```
 
-## Colossal (PHP Load Balancer)
+### Colossal (PHP Load Balancer)
 ```
 echo 'nameserver 192.233.4.2' > /etc/resolv.conf
 apt-get update
@@ -267,7 +267,7 @@ apt-get install lynx -y
 service nginx start
 ```
 
-## Warhammer (Database Server)
+### Warhammer (Database Server)
 ```
 echo 'nameserver 192.233.4.2' > /etc/resolv.conf
 apt-get update
@@ -276,7 +276,7 @@ apt-get install mariadb-server -y
 service mysql start
 ```
 
-## Annie, Bertholdt, Reiner (Laravel Worker)
+### Annie, Bertholdt, Reiner (Laravel Worker)
 ```
 echo 'nameserver 192.233.4.2' > /etc/resolv.conf
 apt-get update
@@ -284,7 +284,7 @@ apt-get install lynx -y
 apt-get install mariadb-client -y
 ```
 
-## Zeke, Erwin (Client)
+### Zeke, Erwin (Client)
 ```
 apt update
 apt install lynx -y
