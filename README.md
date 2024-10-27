@@ -336,8 +336,8 @@ service bind9 restart
 Lakukan konfigurasi sesuai dengan peta yang sudah diberikan. (1)
 <hr>
 
-### [Topology](#topology)
-### [Konfigurasi](#konfigurasi)
+[Topology](#topology)
+[Konfigurasi](#konfigurasi)
 
 ### Soal 2-5
 Jauh sebelum perang dimulai, ternyata para keluarga bangsawan, Tybur dan Fritz, telah membuat kesepakatan sebagai berikut:
