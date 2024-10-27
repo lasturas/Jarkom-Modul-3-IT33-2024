@@ -203,4 +203,94 @@ up echo nameserver 192.233.4.1
 up echo nameserver 192.168.122.1
 ```
 
+# .bashrc
+
+## Paradis (DHCP Relay)
+```
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 192.233.0.0/16
+apt-get update
+apt-get install isc-dhcp-relay -y
+service isc-dhcp-relay start
+```
+
+## Tybur (DHCP Server)
+```
+echo 'nameserver 192.233.4.2' > /etc/resolv.conf
+apt-get update
+apt-get install isc-dhcp-server -y
+```
+
+## Fritz (DNS Server)
+```
+echo 'nameserver 192.168.122.1' > /etc/resolv.conf
+apt-get update
+apt-get install bind9 -y
+
+echo 'options {
+        directory "/var/cache/bind";
+
+        forwarders {
+                192.168.122.1;
+        };
+
+        // dnssec-validation auto;
+        allow-query{any;};
+        auth-nxdomain no;
+        listen-on-v6 { any; };
+}; ' >/etc/bind/named.conf.options
+
+service bind9 restart
+```
+
+## Armin, Eren, Mikasa (PHP Worker)
+```
+echo 'nameserver 192.233.4.2' > /etc/resolv.conf
+apt-get update
+apt-get install lynx -y
+apt-get install wget -y
+apt-get install unzip -y
+apt-get install nginx -y
+apt install software-properties-common -y
+apt install php7.3 -y
+apt install php7.3-fpm -y
+```
+
+## Colossal (PHP Load Balancer)
+```
+echo 'nameserver 192.233.4.2' > /etc/resolv.conf
+apt-get update
+apt-get install bind9 -y
+apt-get install apache2-utils -y
+apt-get install nginx -y
+apt-get install lynx -y
+
+service nginx start
+```
+
+## Warhammer (Database Server)
+```
+echo 'nameserver 192.233.4.2' > /etc/resolv.conf
+apt-get update
+apt-get install mariadb-server -y
+
+service mysql start
+```
+
+## Annie, Bertholdt, Reiner (Laravel Worker)
+```
+echo 'nameserver 192.233.4.2' > /etc/resolv.conf
+apt-get update
+apt-get install lynx -y
+apt-get install mariadb-client -y
+```
+
+## Zeke, Erwin (Client)
+```
+apt update
+apt install lynx -y
+apt install htop -y
+apt install apache2-utils -y
+apt-get install jq -y
+```
+
 # Soal Praktikum 
