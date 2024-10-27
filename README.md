@@ -45,22 +45,22 @@ iface eth0 inet dhcp
 
 auto eth1
 iface eth1 inet static
-	address 192.233.1.0
+	address 192.233.1.1
 	netmask 255.255.255.0
 
 auto eth2
 iface eth2 inet static
-	address 192.233.2.0
+	address 192.233.2.1
 	netmask 255.255.255.0
 
 auto eth3
 iface eth3 inet static
-	address 192.233.3.0
+	address 192.233.3.1
 	netmask 255.255.255.0
 
 auto eth4
 iface eth4 inet static
-	address 192.233.4.0
+	address 192.233.4.1
 	netmask 255.255.255.0
 ```
 
@@ -70,7 +70,7 @@ auto eth0
 iface eth0 inet static
     address 192.233.4.3
     netmask 255.255.255.0
-    gateway 192.233.4.0
+    gateway 192.233.4.1
 ```
 
 ### Annie - Laravel Worker
@@ -79,7 +79,7 @@ auto eth0
 iface eth0 inet static
 	address 192.233.1.2
 	netmask 255.255.255.0
-	gateway 192.233.1.0
+	gateway 192.233.1.1
 ```
 
 ### Bertholdt - Laravel Worker
@@ -88,7 +88,7 @@ auto eth0
 iface eth0 inet static
     address 192.233.1.3
     netmask 255.255.255.0
-    gateway 192.233.1.0
+    gateway 192.233.1.1
 ```
 
 ### Reiner - Laravel Worker
@@ -97,7 +97,7 @@ auto eth0
 iface eth0 inet static
     address 192.233.1.4
     netmask 255.255.255.0
-    gateway 192.233.1.0
+    gateway 192.233.1.1
 ```
 
 ### Armin - PHP Worker
@@ -106,7 +106,7 @@ auto eth0
 iface eth0 inet static
     address 192.233.2.2
     netmask 255.255.255.0
-    gateway 192.233.2.0
+    gateway 192.233.2.1
 ```
 
 ### Eren - PHP Worker
@@ -115,7 +115,7 @@ auto eth0
 iface eth0 inet static
     address 192.233.2.3
     netmask 255.255.255.0
-    gateway 192.233.2.0
+    gateway 192.233.2.1
 ```
 
 ### Mikasa - PHP Worker
@@ -124,7 +124,7 @@ auto eth0
 iface eth0 inet static
     address 192.233.2.4
     netmask 255.255.255.0
-    gateway 192.233.2.0
+    gateway 192.233.2.1
 ```
 
 ### Beast - LoadBalancer Laravel
@@ -133,7 +133,7 @@ auto eth0
 iface eth0 inet static
     address 192.233.3.2
     netmask 255.255.255.0
-    gateway 192.233.3.0
+    gateway 192.233.3.1
 ```
 
 ### Colossal - LoadBalancer PHP
@@ -142,7 +142,7 @@ auto eth0
 iface eth0 inet static
     address 192.233.3.3
     netmask 255.255.255.0
-    gateway 192.233.3.0
+    gateway 192.233.3.1
 ```
 
 ### Warhammer - Database
@@ -151,7 +151,7 @@ auto eth0
 iface eth0 inet static
     address 192.233.3.4
     netmask 255.255.255.0
-    gateway 192.233.3.0
+    gateway 192.233.3.1
 ```
 
 ### Fritz - DNS Server
@@ -160,25 +160,19 @@ auto eth0
 iface eth0 inet static
     address 192.233.4.2
     netmask 255.255.255.0
-    gateway 192.233.4.0
+    gateway 192.233.4.1
 ```
 
 ### Zeke - Client
 ```
 auto eth0
-iface  eth0 inet static
-  address 192.233.1.4
-  netmask 255.255.255.0
-  gateway 192.233.2.0
+iface eth0 inet dhcp
 ```
 
 ### Erwin - Client
 ```
 auto eth0
-iface  eth0 inet static
-  address 192.233.2.4
-  netmask 255.255.255.0
-  gateway 192.233.2.0
+iface eth0 inet dhcp
 ```
 
 # .bashrc
