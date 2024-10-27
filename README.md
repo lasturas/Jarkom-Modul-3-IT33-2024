@@ -180,28 +180,6 @@ iface  eth0 inet static
   netmask 255.255.255.0
   gateway 192.233.2.0
 ```
-## Config Nameserver
-Buka terminal Paradise, masukkan command untuk masuk ke bash `nano /root/.bashrc` dan inputkan kode berikut untuk NAT dengan menggunakan prefix IP kelompok
-```
-iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 192.233.0.0/16
-```
-
-Lalu untuk mengecek nameserver kirimkan kode berikut kepada node Paradise 
-```
-cat /etc/resolv.conf
-```
-Maka akan muncul informasi seperti berikut ini `nameserver 192.168.122.1`
-
-Setelah mengetahui IP nameserver, maka pada semua node buka `nano /etc/resolv.conf` dan tambahkan kode berikut, kecuali pada node Zeke dan Erwin (Client)
-```
-nameserver 192.168.122.1
-```
-
-Sedangkan pada node Zeke dan Erwin (Client) tambahkan kode berikut 
-```
-up echo nameserver 192.233.4.1
-up echo nameserver 192.168.122.1
-```
 
 # .bashrc
 
