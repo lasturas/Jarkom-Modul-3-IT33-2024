@@ -330,6 +330,8 @@ service bind9 restart
 ```
 
 ## Soal 1
+### Topologi (#topologi)
+### Konfigurasi (#konfigurasi)
 
 ## Soal 2-5
 ### Pada Paradis
