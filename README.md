@@ -294,3 +294,108 @@ apt-get install jq -y
 ```
 
 # Soal Praktikum 
+
+## Soal 0
+```
+echo 'zone "marley.it33.com" {
+    type master;
+    file "/etc/bind/sites/marley.it33.com";
+};
+zone "eldia.it33.com" {
+    type master;
+    file "/etc/bind/sites/eldia.it33.com";
+};' > /etc/bind/named.conf.local
+
+mkdir -p /etc/bind/sites
+cp /etc/bind/db.local /etc/bind/sites/marley.it33.com
+cp /etc/bind/db.local /etc/bind/sites/eldia.it33.com
+
+echo ';
+; BIND data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     marley.it33.com. root.marley.it33.com. (
+                        2024102301      ; Serial
+                        604800         ; Refresh
+                        86400         ; Retry
+                        2419200         ; Expire
+                        604800 )       ; Negative Cache TTL
+;
+@       IN      NS      marley.it33.com.
+@       IN      A       192.233.1.2    ; IP Annie
+www     IN      CNAME   marley.it33.com.' > /etc/bind/sites/marley.it33.com
+
+echo ';
+; BIND data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     eldia.it33.com. root.eldia.it33.com. (
+                            2024102301         ; Serial
+                            604800              ; Refresh
+                            86400              ; Retry
+                            2419200              ; Expire
+                            604800 )            ; Negative Cache TTL
+;
+@       IN      NS      eldia.it33.com.
+@       IN      A       192.233.2.2    ; IP Armin
+www     IN      CNAME   eldia.it33.com.' > /etc/bind/sites/eldia.it33.com
+
+echo 'options {
+    directory "/var/cache/bind";
+
+    forwarders {
+        192.168.122.1;
+    };
+
+    // dnssec-validation auto;
+
+    allow-query { any; };
+    auth-nxdomain no;    # conform to RFC1035
+    listen-on-v6 { any; };
+};' > /etc/bind/named.conf.options
+
+service bind9 restart
+```
+
+## Soal 1
+
+## Soal 2-5
+```
+echo 'INTERFACESv4="eth0"' > /etc/default/isc-dhcp-server
+
+echo 'subnet 192.233.1.0 netmask 255.255.255.0 {
+#Soal 2 Range IP Marley
+        range 192.233.1.05 192.233.1.25;
+        range 192.233.1.50 192.233.1.100;
+        option routers 192.233.1.1;
+#Soal 4 DNS Server Fritz
+        option broadcast-address 192.233.1.255;
+        option domain-name-servers 192.233.4.2;
+#Soal 5 Durasi DHCP Marley
+        default-lease-time 1800;
+        max-lease-time 5220;
+}
+
+subnet 192.233.2.0 netmask 255.255.255.0 {
+#Soal 3 Range IP Eldia
+        range 192.233.2.09 192.233.2.27;
+        range 192.233.2.81 192.233.2.243;
+        option routers 192.233.2.1;
+#Soal 4 DNS Server Fritz
+        option broadcast-address 192.233.2.255;
+        option domain-name-servers 192.233.4.2;
+#Soal 5 Durasi DHCP Eldia
+        default-lease-time 360;
+        max-lease-time 5220;
+}
+
+subnet 192.233.3.0 netmask 255.255.255.0 {
+        option routers 192.233.3.1;
+}
+
+subnet 192.233.4.0 netmask 255.255.255.0 {
+        option routers 192.233.4.1;
+} ' > /etc/dhcp/dhcpd.conf
+
+service isc-dhcp-server restart
+```
