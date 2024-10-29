@@ -9,6 +9,11 @@
 1. [Topology](#topology)
 2. [Konfigurasi](#konfigurasi)
 3. [Soal](#soal-praktikum)
+4. [Soal 0](#soal-0)
+5. [Soal 1](#soal-1)
+6. [Soal 2-5](#soal-2-5)
+   - [Dokumentasi](#dokumetasi)
+7.  
 
 # Topology 
 ![image](https://github.com/user-attachments/assets/aadfaf11-db1a-464a-ab1b-cf53a9d91c9b)
@@ -253,8 +258,9 @@ apt-get install jq -y
 # Soal Praktikum 
 
 ### Soal 0
-Pulau Paradis telah menjadi tempat yang damai selama 1000 tahun, namun kedamaian tersebut tidak bertahan selamanya. Perang antara kaum Marley dan Eldia telah mencapai puncak. Kaum Marley yang dipimpin oleh Zeke, me-register domain name marley.yyy.com untuk worker Laravel mengarah pada Annie. Namun ternyata tidak hanya kaum Marley saja yang berinisiasi, kaum Eldia ternyata sudah mendaftarkan domain name eldia.yyy.com untuk worker PHP (0) mengarah pada Armin.
-<hr>
+> Pulau Paradis telah menjadi tempat yang damai selama 1000 tahun, namun kedamaian tersebut tidak bertahan selamanya. Perang antara kaum Marley dan Eldia telah mencapai puncak. Kaum Marley yang dipimpin oleh Zeke, me-register domain name marley.yyy.com untuk worker Laravel mengarah pada Annie. Namun ternyata tidak hanya kaum Marley saja yang berinisiasi, kaum Eldia ternyata sudah mendaftarkan domain name eldia.yyy.com untuk worker PHP (0) mengarah pada Armin.
+
+Buatlah konfigurasi seperti dibawah ini pada `Fritz` menggunakan file bash `nano nnn.sh`
 
 ```
 echo 'zone "marley.it33.com" {
@@ -317,6 +323,15 @@ echo 'options {
 service bind9 restart
 ```
 
+Setelah itu kirimkan command 
+``` 
+chmod +X [nama file]
+``` 
+Untuk menjalankan filenya kirimkan command 
+``` 
+./[namafile]
+```
+
 ### Soal 1
 Lakukan konfigurasi sesuai dengan peta yang sudah diberikan. (1)
 <hr>
@@ -346,6 +361,16 @@ net.ipv4.ip_forward=1
 ' > /etc/sysctl.conf
 
 service isc-dhcp-relay restart
+```
+
+
+Setelah itu kirimkan command 
+``` 
+chmod +X [nama file]
+``` 
+Untuk menjalankan filenya kirimkan command 
+``` 
+./[namafile]
 ```
 
 ### Pada Tybur
@@ -388,3 +413,36 @@ subnet 192.233.4.0 netmask 255.255.255.0 {
 
 service isc-dhcp-server restart
 ```
+
+
+Setelah itu kirimkan command 
+``` 
+chmod +X [nama file]
+``` 
+Untuk menjalankan filenya kirimkan command 
+``` 
+./[namafile]
+```
+
+### Dokumentasi 
+#### No 2 
+Cek untuk rentang IP dengan mengirimkan command `ifconfig` pada client Zeke    
+![image](https://github.com/user-attachments/assets/98d3acde-ed43-466c-bfd1-eb80bd498b84)
+
+#### No 3
+Cek rentang IP dengan mengirimkan command `ifconfig` pada client Erwin    
+![image](https://github.com/user-attachments/assets/15fb745d-00d4-41d2-9691-26b2d2f09f79)
+
+#### No 4
+Cek dengan melakukan ping eldia.it33.com dan marley.it33.com pada client Zeke dan Erwin 
+```
+ping eldia.it33.com
+ping marley.it33.com
+```
+##### Zeke 
+![image](https://github.com/user-attachments/assets/1043b9aa-b4d9-4740-9be1-54202bb4e6c6)
+
+##### Erwin
+![image](https://github.com/user-attachments/assets/89d9688b-64ed-476a-b25c-ba2f601aa846)
+
+
