@@ -439,10 +439,19 @@ Cek dengan melakukan ping eldia.it33.com dan marley.it33.com pada client Zeke da
 ping eldia.it33.com
 ping marley.it33.com
 ```
+
 ##### Zeke 
 ![image](https://github.com/user-attachments/assets/1043b9aa-b4d9-4740-9be1-54202bb4e6c6)
 
 ##### Erwin
 ![image](https://github.com/user-attachments/assets/89d9688b-64ed-476a-b25c-ba2f601aa846)
+
+#### No 5
+Untuk cek apakah no 5 bisa kita perlu mematikan Zeke dan Erwin terlebih dahulu dan jalankan Tybur dan Paradis
+
+![image](https://github.com/user-attachments/assets/ed049521-7f29-4e1d-b3b1-8061866403fa)    
+![image](https://github.com/user-attachments/assets/21f90e89-c156-4f77-b479-1885dd36639f)
+
+
 
 
