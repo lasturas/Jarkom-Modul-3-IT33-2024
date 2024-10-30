@@ -323,13 +323,9 @@ echo 'options {
 service bind9 restart
 ```
 
-Setelah itu kirimkan command 
-``` 
-chmod +X [nama file]
-``` 
 Untuk menjalankan filenya kirimkan command 
 ``` 
-./[namafile]
+bash [namafile]
 ```
 
 ### Soal 1
@@ -364,13 +360,9 @@ service isc-dhcp-relay restart
 ```
 
 
-Setelah itu kirimkan command 
-``` 
-chmod +X [nama file]
-``` 
 Untuk menjalankan filenya kirimkan command 
 ``` 
-./[namafile]
+bash /[namafile]
 ```
 
 ### Pada Tybur
@@ -415,13 +407,10 @@ service isc-dhcp-server restart
 ```
 
 
-Setelah itu kirimkan command 
-``` 
-chmod +X [nama file]
-``` 
+
 Untuk menjalankan filenya kirimkan command 
 ``` 
-./[namafile]
+bash [namafile]
 ```
 
 ### Dokumentasi 
